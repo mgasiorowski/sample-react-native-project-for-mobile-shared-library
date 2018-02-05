@@ -1,0 +1,32 @@
+{
+  "name": "SampleProjectForMobileSharedlibraryCi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js",
+    "lint": "./node_modules/eslint/bin/eslint.js . --ext .js --ext .jsx --format checkstyle -o eslint_report.xml; exit 0",
+    "bundle_android": "./node_modules/.bin/react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
+
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-native": "0.52.0"
+  },
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest-expo": "25.0.0",
+    "react-test-renderer": "16.2.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "21.2.0",
+    "eslint": "^4.8.0",
+    "eslint-plugin-flowtype": "^2.38.0",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "21.2.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
